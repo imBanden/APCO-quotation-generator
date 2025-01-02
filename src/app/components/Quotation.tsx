@@ -7,13 +7,11 @@ import InputSkeleton from "./InputSkeleton";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Skeleton } from "@/components/ui/skeleton";
 
 const Quotation = () => {
   const fontSize = `text-[9px]`;
