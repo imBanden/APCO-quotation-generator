@@ -29,7 +29,6 @@ const Quotation = () => {
 
   const { formData } = useFormContext();
 
-  console.log(formData.itemList);
   return (
     <div className="flex flex-col p-4 max-w-[595px] max-h-[842px] gap-4 w-full h-full">
       {/* Company */}

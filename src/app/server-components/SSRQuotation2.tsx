@@ -11,11 +11,12 @@ import {
 } from "@/components/ui/table";
 import fs from "fs";
 import path from "path";
+import { ItemProps } from "../components/ItemsInput";
 
 const SSRQuotation2 = ({ formData }: { formData: FormDataType }) => {
   const fontSize = `text-[9px]`;
 
-  const totalSum = (data: any) => {
+  const totalSum = (data: ItemProps[]) => {
     console.log(data);
     let total = 0;
     for (const item of data) {
