@@ -1,6 +1,7 @@
 import { Download, LoaderCircle, Redo2 } from "lucide-react";
 import React, { useState } from "react";
 import { useFormContext } from "../FormProvider";
+import Link from "next/link";
 
 const DownloadButton = () => {
   const { formData } = useFormContext();
@@ -58,9 +59,8 @@ const DownloadButton = () => {
           )}
         </div>
       </button>
-      {/* </a> */}
 
-      <a href="/" className="flex w-full">
+      <Link href="/" className="flex w-full">
         <button
           className="flex w-full bg-white justify-center items-center py-4 px-2 gap-2 border-2 border-slate-950 rounded-lg shadow-sm hover:shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:bg-gray-100 transition-all duration-100"
           type="button"
@@ -68,7 +68,7 @@ const DownloadButton = () => {
           <Redo2 className="text-slate-950 w-4 h-4" />
           <p className="text-slate-950 text-xs font-bold">Create new quote</p>
         </button>
-      </a>
+      </Link>
     </div>
   );
 };

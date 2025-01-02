@@ -2,7 +2,7 @@ import InputForm from "./components/InputForm";
 import Quotation from "./components/Quotation";
 
 export default function Home() {
-  const paperRatio = 0.8;
+  // const paperRatio = 0.8;
 
   return (
     <div className="flex h-screen w-full">

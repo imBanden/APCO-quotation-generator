@@ -16,8 +16,9 @@ const SSRQuotation2 = ({ formData }: { formData: FormDataType }) => {
   const fontSize = `text-[9px]`;
 
   const totalSum = (data: any) => {
+    console.log(data);
     let total = 0;
-    for (let item of data) {
+    for (const item of data) {
       total = total + item.price;
     }
 

@@ -81,11 +81,11 @@ const CalendarWidget = ({ label, keyValue }: CalendarWidgeProps) => {
     setMonthString(moment(nowYear + "-" + nowMonth, "YYYY-MM").format("MMMM"));
 
     let currDayInMonth = 1;
-    let monthArray: MonthProps = { weeks: [] };
+    const monthArray: MonthProps = { weeks: [] };
     let firstDay = false;
     let extraDay = 1;
     while (currDayInMonth < daysInMonth) {
-      let weekArray: WeekProps = { days: [] };
+      const weekArray: WeekProps = { days: [] };
       let currDayInWeek = 0;
 
       // find the first day of the month
@@ -132,7 +132,7 @@ const CalendarWidget = ({ label, keyValue }: CalendarWidgeProps) => {
 
     //so that calendar shows at least 7 weeks (styling reasons)
     while (monthArray.weeks.length != 6) {
-      let weekArray: WeekProps = { days: [] };
+      const weekArray: WeekProps = { days: [] };
       for (let i = 0; i < 7; i++) {
         weekArray.days.push({
           day: extraDay,
@@ -166,7 +166,7 @@ const CalendarWidget = ({ label, keyValue }: CalendarWidgeProps) => {
     }
   };
 
-  const { formData, setFormData } = useFormContext();
+  const { setFormData } = useFormContext();
 
   if (isLoading) {
     return null;

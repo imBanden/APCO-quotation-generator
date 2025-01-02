@@ -2,10 +2,11 @@ import { Plus, Trash2 } from "lucide-react";
 import React, { useState } from "react";
 import { useFormContext } from "../FormProvider";
 
-interface ItemProps {
+export interface ItemProps {
   title: string;
-  qty: string;
-  price: string;
+  description: string;
+  qty: number;
+  price: number;
 }
 
 const ItemsInput = () => {

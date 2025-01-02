@@ -12,14 +12,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { ItemProps } from "./ItemsInput";
 
 const Quotation = () => {
   const fontSize = `text-[9px]`;
 
-  const totalSum = (data: any) => {
+  const totalSum = (data: ItemProps[]) => {
+    console.log(data);
     let total = 0;
-    for (let item of data) {
-      total = total + item.price;
+    for (const item of data) {
+      total = total + Number(item.price);
     }
 
     return total;
@@ -27,6 +29,7 @@ const Quotation = () => {
 
   const { formData } = useFormContext();
 
+  console.log(formData.itemList);
   return (
     <div className="flex flex-col p-4 max-w-[595px] max-h-[842px] gap-4 w-full h-full">
       {/* Company */}
