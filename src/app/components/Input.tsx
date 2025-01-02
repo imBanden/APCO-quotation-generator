@@ -16,7 +16,7 @@ const Input = ({
   inputType = "text",
 }: InputProps) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
-  const { formData, setFormData } = useFormContext();
+  const { setFormData } = useFormContext();
   // const [inputValue, setInputValue] = useState(formData[keyValue]);
 
   return (

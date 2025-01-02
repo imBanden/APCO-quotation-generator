@@ -2,12 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Input from "./Input";
-import {
-  Calendar,
-  ChevronLeftIcon,
-  ChevronRight,
-  ReceiptText,
-} from "lucide-react";
+import { ChevronLeftIcon, ChevronRight, ReceiptText } from "lucide-react";
 import ItemsInput from "./ItemsInput";
 import CalendarInput from "./CalendarInput";
 import DownloadButton from "./DownloadButton";

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { FormDataType } from "../FormProvider";
 import formatDate from "../utils/formatDate";
 import {

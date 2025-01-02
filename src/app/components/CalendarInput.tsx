@@ -66,14 +66,17 @@ const CalendarWidget = ({ label, keyValue }: CalendarWidgeProps) => {
   useEffect(() => {
     // get month and year
 
-    let nowMonth = currMonth.toString().padStart(2, "0");
+    const nowMonth = currMonth.toString().padStart(2, "0");
     const prevMonth = (currMonth - 1).toString().padStart(2, "0");
-    let nowYear = currYear.toString();
-    let nowDay = moment().format("D");
-    let daysInMonth = moment(nowYear + "-" + nowMonth, "YYYY-MM").daysInMonth();
-    let firstDayOfMonth = moment(nowYear + "-" + nowMonth + "-" + "01").format(
-      "d"
-    );
+    const nowYear = currYear.toString();
+    // const nowDay = moment().format("D");
+    const daysInMonth = moment(
+      nowYear + "-" + nowMonth,
+      "YYYY-MM"
+    ).daysInMonth();
+    const firstDayOfMonth = moment(
+      nowYear + "-" + nowMonth + "-" + "01"
+    ).format("d");
 
     setMonthString(moment(nowYear + "-" + nowMonth, "YYYY-MM").format("MMMM"));
 
